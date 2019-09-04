@@ -1,0 +1,74 @@
+{
+  "properties": {
+    "relatedProjects": {
+      "title": "Related projects",
+      "description": "The details of related projects: flor example, if this project, represeted under a separate Open Contracting for Infrastructure Data Standard Identifier (oc4ids id). This is commonly used to relate the additional projects involved with the same infrastructure.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RelatedProject"
+      }
+    }
+  },
+  "definitions": {
+    "RelatedProject": {
+      "title": "Related project",
+      "description": "A reference to a related project: generally one preceding or following on from the current project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Relationship ID",
+          "description": "A local identifier for this relationship, unique within this array.",
+          "type": "string"
+        },
+        "relationship": {
+          "title": "Relationship",
+          "description": "The type of relationship, using the open [relatedProjects] codelist.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "codelist": "relatedProject.csv",
+          "openCodelist": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "title": {
+          "title": "Related project name",
+          "description": "The title of the related project, where referencing an open contracting for infrastructure project, this field should match the title field in the related project.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scheme": {
+          "title": "Scheme",
+          "description": "The identification scheme used by this cross-reference, using the open [relatedProjectScheme] codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "relatedProjectScheme.csv",
+          "openCodelist": true
+        },
+        "identifier": {
+          "title": "Identifier",
+          "description": "The identifier of the related project. If the scheme is 'oc4i ID', this must be an Open Contracting for Infrastructure ID (oc4i ID).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "uri": {
+          "title": "Related project URI",
+          "description": "A URI pointing to a machine-readable document, release or record package containing the identifier related project.",
+          "format": "uri",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

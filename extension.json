@@ -1,0 +1,17 @@
+{
+  "name": {
+    "en": "Related Projects"
+  },
+  "description": {
+    "en": "This addition to the OC4IDS schema allows relating different kinds of projects who are involved in the same infrastructure. For example: the construction, expansion, rehabilitation, and replacement of an existing airport through time. "
+  },
+  "documentationUrl": {
+    "en": "https://github.com/antonioherrera/oc4ids-Related-Projects"
+  },
+  "compatibility": [
+    "1.1"
+  ],
+  "schemas": [
+    "project-schema.json"
+  ]
+}
